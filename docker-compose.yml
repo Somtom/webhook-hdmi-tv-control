@@ -1,0 +1,17 @@
+version: '3'
+services:
+  webhook-relay:
+    container_name: webhookrelay
+    image: webhookrelay/webhookrelayd:latest
+    network_mode: host
+    restart: always
+    environment:
+      - RELAY_KEY=${RELAY_KEY}
+      - RELAY_SECRET=${RELAY_SECRET}
+      - BUCKETS=${BUCKETS}
+  hdmi-service:
+    build: .
+    ports:
+        - "5000:5000"
+    volumes: 
+      - .:/usr/src/app
