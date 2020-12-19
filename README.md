@@ -1,3 +1,5 @@
+This is made for the raspberry pi
+
 # Setup
 
 Run `setup.sh` - this will

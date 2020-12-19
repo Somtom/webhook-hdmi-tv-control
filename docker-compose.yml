@@ -2,7 +2,7 @@ version: '3'
 services:
   webhook-relay:
     container_name: webhookrelay
-    image: webhookrelay/webhookrelayd:latest
+    image: webhookrelay/webhookrelayd-arm:latest
     network_mode: host
     restart: always
     environment:
