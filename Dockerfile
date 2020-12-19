@@ -1,6 +1,7 @@
-FROM python:3.9.1-buster
+FROM balenalib/rpi-raspbian:latest
 
-RUN apt-get update && apt-get upgrade && apt-get install cec-utils -y
+RUN apt-get update -y && apt-get upgrade -y
+RUN  apt-get install -y python-pip python-setuptools cec-utils
 
 COPY . /usr/src/app
 

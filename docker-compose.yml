@@ -15,3 +15,5 @@ services:
         - "5000:5000"
     volumes: 
       - .:/usr/src/app
+    devices:
+      - "/dev/vchiq:/dev/vchiq"
