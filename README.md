@@ -21,3 +21,8 @@ As soon as the setup is done you should be able to start the application by runn
 ```
 docker-compose up
 ```
+
+If you want to run it on startup of your raspberry pi just add the following line to your crontab by running sudo crontab -e
+```
+@reboot cd /path/to/your/repo/webhook-hdmi-tv-control && docker-compose up -d &
+```
