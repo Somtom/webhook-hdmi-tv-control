@@ -5,14 +5,14 @@ services:
     image: webhookrelay/webhookrelayd-arm:latest
     network_mode: host
     restart: always
-    environment:
-      - RELAY_KEY=${RELAY_KEY}
-      - RELAY_SECRET=${RELAY_SECRET}
-      - BUCKETS=${BUCKETS}
+    env_file:
+      - .env
   hdmi-service:
     build: .
     ports:
         - "5000:5000"
+    env_file:
+      - .env
     restart: always
     volumes: 
       - .:/usr/src/app
