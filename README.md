@@ -18,9 +18,10 @@ cp .env.template .env
 to create your `.env` file manually
 
 Now you need to fill in the env variables based on your webhookrelay data
-* `BUCKETS`: Name of your bucket
-* `RELAY_KEY`: Key of your token
-* `RELAY_SECRET`: Secret of your token
+* `BUCKETS`: Name of your webhookrelay bucket
+* `RELAY_KEY`: Key of your webhookrelay token
+* `RELAY_SECRET`: Secret of your webhookrelay token
+* `TV_SHUTDOWN_TIMER` (optional): Seconds until TV should be automatically turned off again. If not set, TV will not be turned off automatically
 
 # Run
 
